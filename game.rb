@@ -26,6 +26,6 @@ class Game
   end
 
   def get_cards(gamer)
-    gamer.cards << self.deck.cards.shift # получить первую карту из колоды
+    gamer.cards << deck.cards.shift # получить первую карту из колоды
   end
 end

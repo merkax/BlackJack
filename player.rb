@@ -10,9 +10,9 @@ class Player < Gamer
     super()
   end
 
-  def open_cards
+  # def open_cards
 
-  end
+  # end
 
   
 end

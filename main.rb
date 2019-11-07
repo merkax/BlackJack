@@ -33,12 +33,12 @@ private
 
   attr_reader
 
-  def start_menu
-    puts '=' * 30
-    puts 'Введите 0, если вы хотите завершить программу'
-    puts 'Введите 1, если вы хотите создать станцию'
-    puts 'Введите 2, если вы хотите создать поезд'
-  end
+  # def start_menu
+  #   puts '=' * 30
+  #   puts 'Введите 0, если вы хотите завершить программу'
+  #   puts 'Введите 1, если вы хотите создать станцию'
+  #   puts 'Введите 2, если вы хотите создать поезд'
+  # end
 
   def greeting
     puts "Добро пожаловать в игру BlackJack"
@@ -49,8 +49,8 @@ private
     puts "На Вашем счету:#{balance}"
   end
 
-  def show(list)
-    list.each.with_index(1) { |item, index| puts "#{index}: #{item}" }
-  end
+  # def show(list)
+  #   list.each.with_index(1) { |item, index| puts "#{index}: #{item}" }
+  # end
 
 end
