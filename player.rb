@@ -6,10 +6,13 @@ class Player < Gamer
 
 
   def initialize(name)
-    super(name)
+    @name = name
+    super()
   end
 
   def open_cards
 
   end
+
+  
 end

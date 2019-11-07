@@ -1,3 +1,5 @@
+require_relative 'card'
+
 class Card
 
   SUITS = {
@@ -23,7 +25,7 @@ class Card
     'A' => 11
   }
 
-  # attr_reader 
+  attr_reader :suit, :name, :value 
 
   def initialize(suit, name, value)
     @suit = suit
@@ -31,6 +33,12 @@ class Card
     @value = value
   end
   
+  def ace?
+    name == 'A'
+  end
 
+  # def card_values(name)
+  #   VALUES[name]
+  # end
 
 end

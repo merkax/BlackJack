@@ -10,7 +10,7 @@ class Bank
     @balance = 0
   end
 
-   def make_a_bets(player, dealer)
+  def make_a_bets(player, dealer)
     player.make_a_bet(BET)
     dealer.make_a_bet(BET)
     @balance += BET * 2
