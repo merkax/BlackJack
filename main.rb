@@ -11,7 +11,7 @@ class Main
   def run
     greeting
     loop do
-      game.show_balance(game.player, game.dealer)
+      show_balance
       show_player
       close_card_dealer
       start_menu
@@ -61,8 +61,9 @@ class Main
   end
 
   def show_game
-    game.who_win(game.player, game.dealer)
-    game.show_balance(game.player, game.dealer)
+    game.who_win
+    game.whose_money
+    show_balance
     show_player
     show_dealer
     play_again
@@ -87,6 +88,10 @@ class Main
     end
     puts " Очков: #{game.dealer.scoring}"
   end
+
+    def show_balance
+      puts "#{game.player.name}: #{game.player.balance}$ | Dealer: #{game.dealer.balance}$"
+    end
 
   def play_again
     puts 'Хотите сыграть еще раз?(Y/N)'
