@@ -24,12 +24,13 @@ class Gamer
 
   def scoring
     score = 0
+    cards.each { |card| score += card.value }
     cards.each do |card|
-      score += card.value
-      if score > 21 && card.name == 'A'
+      if score > 21 && card.ace?
         score -= 10
       end
     end
     score
-  end
+   end
 end
+
