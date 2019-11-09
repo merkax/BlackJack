@@ -32,13 +32,8 @@ class Card
     @name = name
     @value = value
   end
-  
+
   def ace?
     name == 'A'
   end
-
-  # def card_values(name)
-  #   VALUES[name]
-  # end
-
 end

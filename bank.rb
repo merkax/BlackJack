@@ -27,7 +27,7 @@ class Bank
     clean_balance!
   end
 
-  private
+  #private
 
   def clean_balance!
     @balance = 0

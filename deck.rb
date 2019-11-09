@@ -12,7 +12,7 @@ class Deck
   private
 
    def create_deck
-     Card::SUITS.each do |card, suit|  #each_with_object([])
+     Card::SUITS.each do |card, suit|
       Card::VALUES.each do |name, value|
         @cards << Card.new(suit, name, value)
       end
