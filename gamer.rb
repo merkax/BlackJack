@@ -1,14 +1,15 @@
+# frozen_string_literal: true
+
 require_relative 'card'
 require_relative 'deck'
 require_relative 'bank'
 
 class Gamer
-
   attr_reader :balance, :cards, :name
   attr_writer :cards
 
   START_MONEY = 100
-  
+
   def initialize
     @balance = START_MONEY
     @cards = []
@@ -26,11 +27,8 @@ class Gamer
     score = 0
     cards.each { |card| score += card.value }
     cards.each do |card|
-      if score > 21 && card.ace?
-        score -= 10
-      end
+      score -= 10 if score > 21 && card.ace?
     end
     score
    end
 end
-

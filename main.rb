@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'card'
 require_relative 'deck'
 require_relative 'gamer'
@@ -7,7 +9,6 @@ require_relative 'bank'
 require_relative 'game'
 
 class Main
-
   def run
     greeting
     loop do
@@ -33,8 +34,8 @@ class Main
   end
 
   def greeting
-    puts "Добро пожаловать в игру BlackJack"
-    puts "Введите Ваше имя, чтобы продолжить: "
+    puts 'Добро пожаловать в игру BlackJack'
+    puts 'Введите Ваше имя, чтобы продолжить: '
     user_name = gets.strip.capitalize
     @game = Game.new(user_name)
   end
@@ -45,7 +46,6 @@ class Main
     when 1 then get_card
     when 2 then skips
     when 3 then show_game
-    #when 0 then exit
     end
   end
 
@@ -70,28 +70,28 @@ class Main
   end
 
   def show_player
-    print "Карты игрока: "
+    print 'Карты игрока: '
     game.show_card(game.player) do |card|
-    print "#{card.suit}#{card.name} "
+      print "#{card.suit}#{card.name} "
     end
     puts " Очков: #{game.player.scoring}"
   end
 
   def close_card_dealer
-    print "Карты дилера: #{'*' * game.dealer.cards.size }"
+    print "Карты дилера: #{'*' * game.dealer.cards.size}"
   end
 
   def show_dealer
-    print "Карты дилера: "
+    print 'Карты дилера: '
     game.show_card(game.dealer) do |card|
-    print "#{card.suit}#{card.name} "
+      print "#{card.suit}#{card.name} "
     end
     puts " Очков: #{game.dealer.scoring}"
   end
 
-    def show_balance
-      puts "#{game.player.name}: #{game.player.balance}$ | Dealer: #{game.dealer.balance}$"
-    end
+  def show_balance
+    puts "#{game.player.name}: #{game.player.balance}$ | Dealer: #{game.dealer.balance}$"
+  end
 
   def play_again
     puts 'Хотите сыграть еще раз?(Y/N)'

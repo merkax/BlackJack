@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'gamer'
 
 class Bank
-  
   BET = 10
 
   attr_accessor :balance
@@ -27,7 +28,7 @@ class Bank
     clean_balance!
   end
 
-  #private
+  # private
 
   def clean_balance!
     @balance = 0
